@@ -1,12 +1,14 @@
 <?php
 
-$host = "mysql";
+$host = getenv (MYSQL_SERVICE_HOST);
 
-$username = "zex";
+$port = getenv (MYSQL_SERVICE_PORT);
 
-$password = "mindkiller"; 
+ $username = getenv (databaseuser);
 
-$dbname = "zex";
+$password = getenv (databasepassword);
+
+$dbname = getenv (databasename);
 
 $connection = mysql_connect($host,$username,$password);
 
